@@ -1,0 +1,59 @@
+class grandparent:
+    def __init__(self,fullname,age,bloodgroup,nationalty,country):
+        self.fullname = fullname
+        self.age = age
+        self.bloodgroup = bloodgroup
+        self.nationalty = nationalty
+        self.country = country
+
+    def display(self):
+        print("MY NAME IS : ",self.fullname)
+        print("MY AGE IS : ",self.age)
+        print("MY BLOODGROUP IS : ",self.bloodgroup)
+        print("MY NATIONALTY IS : ",self.nationalty)
+        print("MY COUNTRY IS : ",self.country)
+
+
+class parent(grandparent):
+    def __init__(self,fullname,age,bloodgroup,nationalty,country,employeeid,departement,city):
+        super().__init__(fullname,age,bloodgroup,nationalty,country)
+        self.employeeid = employeeid
+        self.departement = departement
+        self.city = city
+
+    def show(self):
+        super().display()
+        print("MY EMPOLYEE ID IS : ",self.employeeid)
+        print("MY DEPARTEMENT IS : ",self.departement)
+        print("MY CITY IS : ",self.city)
+
+
+class child(parent):
+    def __init__(self,fullname,age,bloodgroup,nationalty,country,employeeid,departement,city,primarylanguge,company,rollno):
+        super().__init__(fullname,age,bloodgroup,nationalty,country,employeeid,departement,city)
+        self.primarylanguge = primarylanguge
+        self.company = company
+        self.rollno = rollno
+
+    def dekha(self):
+        super().show()
+        print("MY PRIMARY LANGUGE IS : ",self.primarylanguge)
+        print("MY COMPANY IS : ",self.company)
+        print("MY ROLL NO IS : ",self.rollno)
+
+
+st1 = input("Enter Full Name: ")
+st2 = int(input("Enter Age: "))
+st3 = input("Enter Blood Group: ")
+st4 = input("Enter Nationality: ")
+st5 = input("Enter Country: ")
+st6 = int(input("Enter Employee ID: "))
+st7 = input("Enter Department: ")
+st8 = input("Enter City: ")
+st9 = input("Enter Primary Language: ")
+st10 = input("Enter Company: ")
+st11 = int(input("Enter Roll No: "))
+
+st12 = child(st1,st2,st3,st4,st5,st6,st7,st8,st9,st10,st11)
+
+st12.dekha()
